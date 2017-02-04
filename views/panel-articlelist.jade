@@ -1,0 +1,26 @@
+extends layout
+
+append head
+  script(src='/lib/kindeditor/kindeditor.js')
+  script(src='/lib/kindeditor/lang/zh_CN.js')
+  script(src='/javascripts/article-upload.js')
+
+block content
+  p #{title}
+  table.table.table-striped
+    thead
+      tr
+        th 编号
+        th 类型
+        th 名称
+        th 操作
+    tbody
+      - each it in data
+        tr
+          td #{it.id}
+          td #{it.field}
+          td #{it.title}
+          td
+            a(href='/panel/article/#{it.id}') 修改
+  .clear()
+  a.pull-right(onclick='newArticle()') 新建文档

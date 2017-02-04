@@ -1,12 +1,10 @@
 extends layout
 
 block content
-	.container
-		.container
-			.row
-				.col-md-7
-					简介
-				.col-md-5
-						include slides
-			.row
-		p Welcome to #{title}
+  .homepage-container
+      .box.pull-left
+        h2 简介
+        div !{unescape(data.introduction.text)}
+        a.show-details(href='/introduction') 更多...
+      .box.pull-right
+        h2 照片墙

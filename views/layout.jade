@@ -1,14 +1,23 @@
 doctype html
 html
-  head
-    meta(charset='utf-8')
-    meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    title= 金色老年养老院
-    link(rel='stylesheet', href='/stylesheets/style.css')
-    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
-    script(src='/javascripts/jquery.js')
-    script(src='/javascripts/bootstrap.min.js')
+  block head
+      head
+        !{'<meta name="baidu-site-verification" content="wC9wVFCHFl" />'}
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        - if (title == null)
+          title 广州市白云区金色老年公寓
+        - else
+          title #{title}
+        link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        script(src='/javascripts/jquery.js')
+        script(src='/javascripts/bootstrap.min.js')
   body
-    include navigator
-    block content
+      .container-fluid
+          include navigator
+          block content
+          include footer
+      img.img-bottom(src='/images/foot-image2.jpg')
+      //img(src='/images/leaves-1.png')

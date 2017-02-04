@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  .container
+    form(action='/user/login',method='post',width='400px')
+      table(width='250px').message-table
+        tr
+          td 
+            label 用户名: 
+          td 
+            input(name='username',type='text')
+        tr
+          td
+            label 密码: 
+          td
+            input(type='password',name='password')
+      br
+      input(type='submit',value='提交')

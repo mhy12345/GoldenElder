@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  .homepage-container
+    a.pull-right(href='/feedback/new') 新建留言
+    .clear
+    - each it in data
+        - if (!admin && it.public == false)continue;
+        - if (admin && it.public == false)
+          label This is private message.
+        hr
+        label 昵称：
+        span #{it.postUser}
+        label 标题：
+        span #{it.title}
+        br
+        #{it.text}
+        - if (admin)
+          label 邮箱
+          span #{it.contactEmail}
+          label 手机
+          span #{it.cellphone}
+          a.pull-right(href='/api/feedback/setprivate') 私有化
+        .clear

@@ -1,14 +1,51 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-	background-color: #00ffff;
-}
-
 a {
   color: #00B7FF;
 }
 
 img.full{
 		height:100%;
-		width:100%
+		width:100%;
 }
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+}
+
+.nav-text{
+   /*color: #D2691E;*/
+    font-size: 15pt;
+}
+.nav-first-text{
+    font-size: 18pt;
+}
+.img-bottom{
+    width:100%;
+    position:relative;
+    margin-top:-300px;
+    z-index:-100;
+}
+.show-details{
+    float:right;
+}
+.clear{
+    clear:both;
+}
+.box{
+    min-height:250px;
+    width:430px;
+    margin:auto;
+}
+.homepage-container{
+    min-height:700px;
+}
+ body{margin:auto;height:100%;width:1000px} 
+ .ccontainer{min-height:100%;height:auto !important;height:100%;/*ie6不识别min-height,如上述处理*/position:relative;} 
+ .cmain{padding-bottom:60px;/*padding等于footer的高度*/} 
+ .cfooter{position:absolute;bottom:0;width:100%;height:60px;/*footer的高度*/} 
+
+tr{
+    margin:10px;
+ }

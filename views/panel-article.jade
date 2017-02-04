@@ -1,0 +1,22 @@
+extends layout
+
+append head
+  script(src='/lib/kindeditor/kindeditor.js')
+  script(src='/lib/kindeditor/lang/zh_CN.js')
+  script(src='/javascripts/article-upload.js')
+
+block content
+  form
+      input#articleId(type='hidden',value='#{data._id}')
+    div
+      h2 文章类型
+      input#articleField(type='field',value='#{data.field}')
+    div
+      h2 文章标题
+      input#articleTitle(type='text',value='#{data.title}')
+    div
+      h2 编辑
+      input#articleText(type='hidden',value='#{data.text}')
+    textarea#editor(name="content",style="width:100%;height:500px;") 
+      br
+    input(type='button',name='saveArticle',value='保存')

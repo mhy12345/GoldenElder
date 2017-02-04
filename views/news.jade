@@ -1,0 +1,19 @@
+extends layout
+
+
+block content
+  .homepage-container
+      p #{title}
+      table.table.table-striped
+        thead
+          tr
+            th 名称
+            th 时间
+        tbody
+          - each it in data
+            tr
+              td 
+                a(href='/article/#{it.id}') #{it.title}
+              td
+                span #{it.postTime.Format("yyyy-MM-dd hh:mm:ss")}
+      .clear()

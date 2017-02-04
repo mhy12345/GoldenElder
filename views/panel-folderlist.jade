@@ -1,0 +1,22 @@
+extends layout
+
+append head
+  script(src='/javascripts/article-upload.js')
+  
+block content
+  p #{title}
+  table.table.table-striped
+    thead
+      tr
+        th 编号
+        th 名称
+        th 操作
+    tbody
+      - each it in data
+        tr
+          td #{it.id}
+          td #{it.name}
+          td
+            a(href='/panel/folder/#{it.id}') 修改
+  .clear()
+  a.pull-right(onclick='newFolder()') 新建文档

@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  .container
+    - if (user)
+      p
+        a(href='/panel/articlelist') 文章列表
+    - else
+      p
+        a(href='/user/register') 注册
+      p
+        a(href='/user/login') 登录
